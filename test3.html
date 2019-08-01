@@ -1,0 +1,33 @@
+<!doctype HTML>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="node_modules/aframe-geojson-component/dist/aframe-geojson-component.min.js"></script>
+  </head>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="json-world-110m" src="assets/world-110m.v1.json" />
+        <canvas id="world-canvas" crossOrigin="anonymous" width="4096" height="2048"></canvas>
+      </a-assets>
+      <a-entity>
+        <a-entity
+            id="globe"
+            position="0 0 0"
+            shadow="cast: true;receive:true" 
+            geometry="primitive: sphere;"
+            material="color: #000;"
+
+        ></a-entity>
+        <!-- <a-sphere position="0.11 1.9 -9" color="#ee4421" shadow="cast:true; receive:true;"></a-sphere> -->
+        <!-- <a-plane position="0 1 -10" width="20" height="20" color="#dadada" shadow="cast:true;receive:true;"> -->
+        <!-- </a-plane> -->
+        <a-cylinder color="#a345b2" radius="10" height="10" side="back" shadow="cast:true; receive:true;"></a-cylinder>
+        <a-entity light="type: point; intensity:  0.75; distance: 30; decay: 0; castShadow:true;"></a-entity>
+        <a-entity light="type: ambient; intensity: 0.5;"></a-entity>
+      </a-entity>
+      <a-sky color="#000"></a-sky>
+    </a-scene>
+  </body>
+</html>

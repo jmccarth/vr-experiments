@@ -1,0 +1,39 @@
+<!doctype HTML>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script> -->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="node_modules/aframe-geojson-component/dist/aframe-geojson-component.min.js"></script>
+  </head>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene>
+      <!-- <a-entity environment="preset: forest; dressingAmount: 500"></a-entity> -->
+      <a-assets>
+        <a-asset-item id="json-world-110m" src="assets/world-110m.v1.json" />
+        <canvas id="world-canvas" crossOrigin="anonymous" width="4096" height="2048"></canvas>
+      </a-assets>
+      <a-entity position="0 0 -6">
+        <a-entity 
+            geometry="primitive: sphere;"
+            material="color: #000;"
+            geojson="
+              src: #json-world-110m; 
+              topologyObject: countries;
+              lineWidth: 3;
+              projection: geoEquirectangular;"
+        ></a-entity>
+        <a-entity
+          material="shader: flat; src: #world-canvas; transparent: true; opacity: 1.0; side:back"
+          geometry="primitive: sphere; radius: 1;"
+          geojson-texture="canvas: #world-canvas;
+          src: #json-world-110m;
+          projection: geoEquirectangular; fillColor: #fff; lineColor: #000; lineWidth: 2;
+          topologyObject: countries;"
+        >
+        </a-entity>
+      </a-entity>
+      <a-sky color="#dadada"></a-sky>
+    </a-scene>
+  </body>
+</html>

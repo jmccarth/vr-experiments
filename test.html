@@ -1,0 +1,27 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='sourceType: webcam;' renderer='precision:mediump;'>
+      <a-assets>
+        <a-asset-item id="goose-obj" src="models/gltf/Mesh_Goose.gltf"></a-asset-item>
+        <a-asset-item id="globe-obj" src="models/gltf/earth_ball.gltf"></a-asset-item>
+        <!-- <img crossorigin="anonymous" id="earth-map" src="models/gtlf/earth_ball.jpg"> -->
+      </a-assets>
+      <!--<a-marker preset="hiro"> -->
+      <a-marker type="pattern" preset="custom" url="markers/pattern-marker.patt">
+          <!-- <a-gltf-model rotation="270 0 0" scale="0.02 0.02 0.02" src="#goose-obj"></a-gltf-model> -->
+          <a-sphere position="0 0 0" radius="1" wireframe=true></a-cylinder>
+          <a-gltf-model rotation="0 0 0" scale="0.01 0.01 0.01" src="#globe-obj"></a-gltf-model>
+          <a-entity light="type:point; intensity: 0.75; distance:50; decay:2" position="0 0 0"></a-entity>
+      </a-marker>
+
+      <!-- <a-marker type="pattern" preset="custom" url="markers/pattern-marker.patt">
+        
+      </a-marker> -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
