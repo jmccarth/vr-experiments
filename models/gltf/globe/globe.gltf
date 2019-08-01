@@ -1,0 +1,114 @@
+{
+	"asset" : {
+		"generator" : "FME 2018.1.0.0",
+		"version" : "2.0"
+	},
+	"materials" : [
+		{
+			"name" : "02 - Default",
+			"pbrMetallicRoughness" : {
+				"baseColorFactor" : [ 0.3529411852359772, 1, 0, 1 ],
+				"roughnessFactor" : 0.8999999985098839,
+				"metallicFactor" : 0.5
+			}
+		}
+	],
+	"meshes" : [
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+						"NORMAL" : 1,
+						"POSITION" : 0,
+						"TEXCOORD_0" : 2
+					},
+					"indices" : 3,
+					"material" : 0,
+					"mode" : 4
+				}
+			]
+		}
+	],
+	"nodes" : [
+		{
+			"matrix" : [ 1, 0, 0, 0, 0, 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1 ],
+			"mesh" : 0
+		}
+	],
+	"scenes" : [
+		{
+			"nodes" : [ 0 ]
+		}
+	],
+	"scene" : 0,
+	"accessors" : [
+		{
+			"bufferView" : 0,
+			"byteOffset" : 0,
+			"componentType" : 5126,
+			"count" : 186555,
+			"type" : "VEC3",
+			"min" : [ -45.72658157348633, -37.460174560546875, -50.75943374633789 ],
+			"max" : [ 72.47352600097656, 71.9073715209961, 66.8255386352539 ]
+		},
+		{
+			"bufferView" : 1,
+			"byteOffset" : 0,
+			"componentType" : 5126,
+			"count" : 186555,
+			"type" : "VEC3",
+			"min" : [ -0.9999507069587708, -0.9999619722366333, -0.9999496936798096 ],
+			"max" : [ 1, 0.9999608993530273, 0.9999992847442627 ]
+		},
+		{
+			"bufferView" : 2,
+			"byteOffset" : 0,
+			"componentType" : 5126,
+			"count" : 186555,
+			"type" : "VEC2",
+			"min" : [ 0.004659924190491438, 0.01849275827407837 ],
+			"max" : [ 0.9165606498718262, 0.9438974857330322 ]
+		},
+		{
+			"bufferView" : 3,
+			"byteOffset" : 0,
+			"componentType" : 5125,
+			"count" : 186555,
+			"type" : "SCALAR",
+			"min" : [ 0 ],
+			"max" : [ 186554 ]
+		}
+	],
+	"bufferViews" : [
+		{
+			"buffer" : 0,
+			"byteOffset" : 0,
+			"byteLength" : 2238660,
+			"target" : 34962
+		},
+		{
+			"buffer" : 0,
+			"byteOffset" : 2238660,
+			"byteLength" : 2238660,
+			"target" : 34962
+		},
+		{
+			"buffer" : 0,
+			"byteOffset" : 4477320,
+			"byteLength" : 1492440,
+			"target" : 34962
+		},
+		{
+			"buffer" : 0,
+			"byteOffset" : 5969760,
+			"byteLength" : 746220,
+			"target" : 34963
+		}
+	],
+	"buffers" : [
+		{
+			"uri" : "globe.bin",
+			"byteLength" : 6715980
+		}
+	]
+}
