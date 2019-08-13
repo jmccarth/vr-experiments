@@ -1,0 +1,22 @@
+<!doctype HTML>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene>
+    <a-assets>
+      <img id="sky" src="assets/spongy.jpg">
+      <a-asset-item id="goose" src="models/gltf/Mesh_Goose.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity camera look-controls="reverseMouseDrag:true"></a-entity>
+
+    <a-sky src="#sky"></a-sky>
+    <a-entity rotation="0 0 0" scale="0.02 0.02 0.02" position="-1.196 1.806 3.885" gltf-model="#goose"></a-entity>
+  </a-scene>
+</body>
+
+</html>
