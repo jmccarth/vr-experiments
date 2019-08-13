@@ -8,13 +8,14 @@
       <a-assets>
         <a-asset-item id="goose-obj" src="models/gltf/Mesh_Goose.gltf"></a-asset-item>
         <a-asset-item id="globe-obj" src="models/gltf/earth_ball.gltf"></a-asset-item>
+        <a-asset-item id="projection" src="models/gltf/projections.glb"></a-asset-item>
         <!-- <img crossorigin="anonymous" id="earth-map" src="models/gtlf/earth_ball.jpg"> -->
       </a-assets>
       <!--<a-marker preset="hiro"> -->
       <a-marker type="pattern" preset="custom" url="markers/pattern-marker.patt">
           <!-- <a-gltf-model rotation="270 0 0" scale="0.02 0.02 0.02" src="#goose-obj"></a-gltf-model> -->
           <a-sphere position="0 0 0" radius="1" wireframe=true></a-cylinder>
-          <a-gltf-model rotation="0 0 0" scale="0.01 0.01 0.01" src="#globe-obj"></a-gltf-model>
+          <a-gltf-model rotation="0 0 0" scale="0.01 0.01 0.01" src="#projection"></a-gltf-model>
           <a-entity light="type:point; intensity: 0.75; distance:50; decay:2" position="0 0 0"></a-entity>
       </a-marker>
 
