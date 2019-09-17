@@ -1,0 +1,24 @@
+<!doctype HTML>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene>
+    <a-assets>
+      <img id="spongy" src="assets/spongy.jpg">
+      <a-asset-item id="goose" src="models/gltf/Mesh_Goose.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity camera wasd-controls look-controls="reverseMouseDrag:true"></a-entity>
+
+    <!-- <a-sky src="#spongy"></a-sky> -->
+    <a-entity environment="preset:forest"></a-entity>
+    <a-sphere position="0 0.05 -0.5" scale="0.1 0.1 0.1"></a-sphere>
+  </a-scene>
+</body>
+
+</html>

@@ -10,44 +10,35 @@
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene>
     <a-assets>
-      <a-asset-item id="globe" src="models/gltf/globe/globe.gltf"></a-asset-item>
-      <canvas id="world-canvas" crossOrigin="anonymous" width="4096" height="2048"></canvas>
+      <a-asset-item id="globe" src="models/gltf/newglobe1/globe1.glb"></a-asset-item>
     </a-assets>
-
-    <a-entity environment></a-entity>
-    <a-entity id="globeModel" gltf-model="#globe" scale="0.03 0.03 0.03" position="0 3.75 0" shadow="cast:true; receive:true;"></a-entity>
-
-    <a-entity position="0 3.75 0" light="type: point; intensity:  0.75; distance: 30; decay: 0; castShadow:true; "></a-entity>
-    <a-cylinder position="0 3.5 0" id="outerCylinder" color="#ead2ee" visible="false" radius="4" height="6.9" side="back"
+    <!-- <a-entity environment></a-entity> -->
+    <a-entity id="globeModel" gltf-model="#globe" scale="0.03 0.03 0.03" position="0 3.5 0" shadow="cast:true; receive:true;"></a-entity>
+    <a-entity position="0 3.5 0" light="type: point; intensity:  0.75; distance: 30; decay: 0; castShadow:true; "></a-entity>
+    <a-entity light="type: ambient; color: #CCC; intensity: 0.5"></a-entity>
+    <a-cylinder position="0 3.75 0" id="outerCylinder" color="#ead2ee" visible="false" radius="2.5" height="4.25" side="back"
       shadow="cast:true; receive:true;"></a-cylinder>
-    <a-cone id="outerCone" color="#ead2ee" visible="true" position="0 5.5 0" height="6.9" radius-bottom="5"
+    <a-cone id="outerCone" color="#ead2ee" visible="true" position="0 4.5 0" height="6.9" radius-bottom="3.5"
       radius-top="0.5" side="back" shadow="cast:true; receive:true;"></a-cone>
-    <a-plane id="outerPlane" color="#ead2ee" visible="false" position="0 3.5 -5" height="50" width="50"
+    <a-plane id="outerPlane" color="#ead2ee" visible="false" position="0 3.5 -3" height="25" width="25"
       shadow="cast:true;receive:true;"></a-plane>
     <a-sky color="#dadada"></a-sky>
 
-
-
-    <a-entity id="camera" camera look-controls wasd-controls position="0 3.5 10" acceleration="90">
+    <a-entity id="camera" camera look-controls wasd-controls position="0 3.5 7" acceleration="180">
       <a-plane scale="1.75 1.75 1.75" id="instructions" position="-2 1 -2" rotation="0 0 0" color="#435432">
           <!-- MENU -->
-          <a-entity scale="0.1 0.1 0.1" text="value: Click shapes to change projection type; color: #fff; width: 8" position="0.2 0.2 0.1"></a-entity>
+          <a-entity scale="0.1 0.1 0.1" text="value: Click shapes to change projection type; color: #fff; width: 8" position="0.11 0.2 0.1"></a-entity>
           <a-plane scale="0.1 0.1 0.1" position="-0.1 0.1 0.1" plane-listener id="planeButton"></a-plane>
           <a-circle scale="0.05 0.05 0.05" position="0.1 0.1 0.1" cylinder-listener id="cylButton"></a-circle>
           <a-triangle scale="0.1 0.1 0.1" position="0.3 0.1 0.1" cone-listener id="coneButton"></a-triangle>
 
-          <a-entity scale="0.1 0.1 0.1" text="value: Keyboard Controls:; color: #fff; width: 8" position="0.2 -0.1 0.1"></a-entity>
+          <a-entity scale="0.1 0.1 0.1" text="value: Keyboard Controls:; color: #fff; width: 8" position="0.11 -0.1 0.1"></a-entity>
           <a-entity scale="0.1 0.1 0.1" text="value: rotate globe on x-axis: i/j; color: #fff; width: 8" position="0.2 -0.15 0.1"></a-entity>
           <a-entity scale="0.1 0.1 0.1" text="value: rotate globe on y-axis: o/k; color: #fff; width: 8" position="0.2 -0.2 0.1"></a-entity>
           <a-entity scale="0.1 0.1 0.1" text="value: rotate globe on z-axis: p/l; color: #fff; width: 8" position="0.2 -0.25 0.1"></a-entity>
           <a-entity scale="0.1 0.1 0.1" text="value: reset rotation: r; color: #fff; width: 8" position="0.2 -0.3 0.1"></a-entity>
           <a-entity scale="0.1 0.1 0.1" text="value: move camera: w,a,s,d; color: #fff; width: 8" position="0.2 -0.35 0.1"></a-entity>
           <a-entity scale="0.1 0.1 0.1" text="value: reset camera location: c; color: #fff; width: 8" position="0.2 -0.4 0.1"></a-entity>
-
-          
-          <!-- <a-cylinder cylinder-listener id="cylButton" position="0 0 0"></a-cylinder>
-          <a-cone cone-listener id="coneButton" position="-1 0 0"></a-cone>
-          <a-plane plane-listener id="planeButton" position="1 0 0"></a-plane> -->
       </a-plane>
       <a-entity cursor="fuse: false; fuseTimeout: 500; rayOrigin: mouse" position="0 0 -1"
         material="color: black; shader: flat">
